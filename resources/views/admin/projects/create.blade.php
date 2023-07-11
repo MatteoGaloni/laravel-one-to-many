@@ -16,15 +16,15 @@
 
         <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" class="form-control" id="title">
+            <input type="text" name="title" class="form-control" id="title">
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea name="" id="description" class="form-control" cols="30" rows="10"></textarea>
+            <textarea name="description" id="description" class="form-control" cols="30" rows="10"></textarea>
         </div>
         <div class="form-group">
             <label for="img">URL IMG</label>
-            <input type="text" class="form-control" id="img" placeholder="Password">
+            <input type="text" name="img" class="form-control" id="img" placeholder="Password">
         </div>
 
         <button type="submit" class="btn btn-primary my-4">Submit</button>

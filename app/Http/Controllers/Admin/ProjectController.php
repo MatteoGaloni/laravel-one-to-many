@@ -81,7 +81,12 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        $data = $request->validated();
+        $project->fill($data);
+
+        $project->update();
+
+        return to_route("admin.projects.show", compact('project'));
     }
 
     /**
@@ -92,6 +97,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return to_route("admin.projects.index", compact('project'));
     }
 }

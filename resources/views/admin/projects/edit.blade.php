@@ -10,7 +10,7 @@
             @endforeach
         </div>
     @endif
-    <form action="{{ route('admin.projects.store') }}" method="POST" class="needs-validation">
+    <form action="{{ route('admin.projects.update', $project) }}" method="POST" class="needs-validation">
         @csrf
         @method('PUT')
 
