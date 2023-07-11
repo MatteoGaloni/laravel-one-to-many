@@ -15,14 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        // inserisci prima la categoria
-        $this->call(ProjectSeeder::class);
-
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // inserisci prima il tipo
+        $this->call(
+            TypeSeeder::class,
+            ProjectSeeder::class
+        );
     }
 }
