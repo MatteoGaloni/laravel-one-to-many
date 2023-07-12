@@ -18,6 +18,17 @@
             <label for="title">Title</label>
             <input type="text" name="title" class="form-control" id="title">
         </div>
+
+        <div class="form-group">
+            <label for="type_id">Categoria</label>
+            <select class="form-select" name="type_id">
+                <option selected disabled>Choose project type</option>
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}">{{ $type->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
         <div class="form-group">
             <label for="description">Description</label>
             <textarea name="description" id="description" class="form-control" cols="30" rows="10"></textarea>
